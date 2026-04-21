@@ -4,9 +4,10 @@
  *  text fields where the user can type in the information about gadgets. It also has buttons
  *  that the user can click to do different things in the application. The class extends Application
  *  which is needed to run a JavaFX program. It also implements EventHandler which allows the class
- *  to detect when the button is clicked. All the gadgets that are added are stored in an ArrayList called gadgets.
- * The ArrayList can hold both Mobile and MP3 objects because they both extend Gadget. The log area at
- *  the bottom of the screen shows messages to the user, so they know what is happening in the application.
+ *  to detect when the button is clicked. All the gadgets that are added are stored in an ArrayList 
+ *  called gadgets. The ArrayList can hold both Mobile and MP3 objects because they both extend Gadget.
+ *  The log area at the bottom of the screen shows messages to the user, so they know what is happening
+ *  in the application.
  *
  * Author:- Anish Shashicant
  * Date:- 19th April 2026
@@ -143,22 +144,14 @@ public class GadgetShop extends Application implements EventHandler<ActionEvent>
             price_Field,
             weightLabel,
             weight_Field,
-            sizeLabel,
-            size_Field,
-            creditLabel,
-            credit_Field,
-            memoryLabel,
-            memory_Field,
-            phoneLabel,
-            phone_Field,
-            durationLabel,
-            duration_Field,
-            downloadLabel,
-            download_Size_Field,
-            displayLabel,
-            display_Number_Field,
-            addMobileButton,
-            addMP3Button,
+            sizeLabel,size_Field,
+            creditLabel,credit_Field,
+            memoryLabel,memory_Field,
+            phoneLabel,phone_Field,
+            durationLabel,duration_Field,
+            downloadLabel,download_Size_Field,
+            displayLabel,display_Number_Field,
+            addMobileButton,addMP3Button,
             displayAllButton,
             makeCallButton,
             downloadMusicButton,
@@ -243,7 +236,7 @@ public class GadgetShop extends Application implements EventHandler<ActionEvent>
         }
         catch (Exception e)
         {
-            show_Error("Error adding a mobile gadget.\nPlease check all fields are filled correctly.");
+        show_Error("Error adding a mobile gadget.\nPlease check all fields are filled correctly.");
         }
     }
 
@@ -260,7 +253,6 @@ public class GadgetShop extends Application implements EventHandler<ActionEvent>
                 show_Error("Values cannot be negative.");
                 return;
             }
-
             MP3 p = new MP3(
                     model_Field.getText(),
                     price,
@@ -268,7 +260,6 @@ public class GadgetShop extends Application implements EventHandler<ActionEvent>
                     size_Field.getText(),
                     memory
                 );
-
             gadgets.add(p);
             logArea.appendText("MP3 added to the Gadget Shop.\n");
         }
